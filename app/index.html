@@ -26,8 +26,11 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-
+  <style>
+    #mais-conteudo {
+      display: none; /* Inicialmente, oculta o conteúdo adicional */
+    }
+  </style>
 </head>
 
 <body>
@@ -68,7 +71,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Guilherme Oliveira</h1>
-      <p>I'm <span class="typed" data-typed-items="Data Analyst, Developer, Runner, Electrical Technician"></span></p>
+      <p translate="no">I'm <span class="typed" data-typed-items="Data Analyst, Developer, Runner, Electrical Technician"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -95,9 +98,8 @@
             <div class="row">
               <div class="col-lg-7">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.guilhermeoliveira.tech</span></li>
+                  <li translate="no"><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.guilhermeoliveira.tech</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>guilherme.oliveira.antonio@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
               </div>
               <div class="col-lg-7">
@@ -172,14 +174,14 @@
 
         <div class="section-title">
           <h2>Skills</h2>
-          <p>"From challenges to achievements, my journey of overcoming the technology trail is marked by dedication and continuous learning. I transformed obstacles into opportunities by learning the concepts of Python, SQL, R, Excel and Tableau technologies. Every line of code, every SQL query , each visualization in Tableau is a narrative of overcoming, reflecting not just technical mastery, but resilience and determination in the face of challenges.</p>
+          <p>From challenges to achievements, my journey of overcoming the technology trail is marked by dedication and continuous learning. I transformed obstacles into opportunities by learning the concepts of Python, SQL, R, Excel and Tableau technologies. Every line of code, every SQL query , each visualization in Tableau is a narrative of overcoming, reflecting not just technical mastery, but resilience and determination in the face of challenges.</p>
         </div>
 
         <div class="row skills-content">
 
           <div class="col-lg-6" data-aos="fade-up">
 
-            <div class="progress">
+            <div class="progress" translate="no">
               <span class="skill">PYTHON <i class="val">100%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -211,7 +213,7 @@
               </div>
             </div>
 
-            <div class="progress">
+            <div class="progress" translate="no">
               <span class="skill">TABLEU <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
@@ -276,12 +278,21 @@
               <p><em>Via Mobilidade, SP </em></p>
               <ul>
                 <li>Carry out regular inspections of railway lines, tracks, signaling, stations, performing preventive maintenance tasks on tracks and signaling equipment.</li>
-                <li>Perform immediate repairs to damaged tracks, faulty signals, power systems, and other critical components.</li>              
-                <li>Respond to emergencies, such as derailments, accidents or critical situations, taking necessary measures to minimize damage and restore safe operation.</li>              
-                <li>Work closely with engineering, operations and safety teams to resolve complex issues and implement rail system improvements.</li>              
-                <li>Maintain accurate records of maintenance activities, prepare inspection reports and document all interventions carried out to ensure compliance with regulatory standards and safety standards.</li>              
-                <li>Attend regular training to stay up to date on maintenance best practices and emerging technologies in the rail industry.</li>
-              </ul>
+                <li>Maintain specific software systems for the railway sector, including passenger control, monitoring (CCTV), sound and signaling systems.</li>
+                <li>Use SAP MM to manage preventive and corrective maintenance orders in the railway environment.</li>
+                <li>Record details of maintenance activities in SAP MM, including materials used, working hours and any relevant notes.</li>
+                <button onclick="mostrarMais()">Show More</button>       
+                <div id="mais-conteudo">                  
+                  <li>Perform immediate repairs to damaged tracks, faulty signals, power systems, and other critical components.</li>  
+                  <li>Respond to emergencies, such as derailments, accidents or critical situations, taking necessary measures to minimize damage and restore safe operation.</li>                                
+                  <li>Maintain accurate records of maintenance activities, prepare inspection reports and document all interventions carried out to ensure compliance with regulatory standards and safety standards.</li>                                
+                  <li>Manage and operate the electrical systems that power trains, including maintenance of substations, transmission lines and other components.</li>
+                  <li>Perform inspections and preventive maintenance on electrical infrastructures, such as electrified rails, cables, catenaries and energy distribution systems..</li>
+                  <li>Diagnose and resolve electrical problems that may arise in railway systems, minimizing interruptions to operations.</li>
+                  <li>Provide technical training for operators and teams involved in the use of technological systems, in addition to offering technical support to resolve problems and ensure operational continuity.</li>
+                  <li>Work closely with engineering, operations and safety teams to resolve complex issues and implement rail system improvements.</li>              
+                </div>
+              </ul>           
             </div>
             <div class="resume-item">
               <h4>Graphic design specialist</h4>
@@ -649,6 +660,19 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function mostrarMais() {
+      var maisConteudo = document.getElementById("mais-conteudo");
+
+      // Alterna a exibição do conteúdo adicional
+      if (maisConteudo.style.display === "none") {
+        maisConteudo.style.display = "block";
+      } else {
+        maisConteudo.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 
