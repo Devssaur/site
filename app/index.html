@@ -23,7 +23,7 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <style>
@@ -406,8 +406,12 @@
                 </p>
                 <div class="portfolio-links">
                   <div style="width: 100%; height: 430px;">
-                    <!-- Usando a tag <embed> -->
-                    <embed src="pdf/visualizacao_dados.pdf" type="application/pdf" width="100%" height="100%">
+                    <!-- Usando a tag <object> para incorporar o conteúdo -->
+                    <object data="pdf/visualizacao_dados.pdf" type="application/pdf" width="100%" height="100%">
+                      <!-- Conteúdo alternativo ou mensagem de erro -->
+                      <p>O conteúdo não pôde ser carregado. <a href="pdf/visualizacao_dados.pdf">Clique aqui</a> para abrir o arquivo em outra aba.</p>
+                      <p>Ou para download do PDF. <a href="pdf/visualizacao_dados.pdf" download="Visualizacao_estudo.pdf">Clique aqui</a></p>
+                    </object>
                   </div>
                   <a href="notion.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
@@ -424,8 +428,12 @@
                 </p>
                 <div class="portfolio-links">
                   <div style="width: 100%; height: 430px;">
-                    <!-- Usando a tag <embed> -->
-                    <embed src="pdf/docker/conceitos.pdf" type="application/pdf" width="100%" height="100%">
+                    <!-- Usando a tag <object> para incorporar o conteúdo -->
+                    <object data="pdf/docker/conceitos.pdf" type="application/pdf" width="100%" height="100%">
+                      <!-- Conteúdo alternativo ou mensagem de erro -->
+                      <p>O conteúdo não pôde ser carregado. <a href="pdf/docker/conceitos.pdf">Clique aqui</a> para abrir o arquivo em outra aba.</p>
+                      <p>Ou para download do PDF. <a href="pdf/docker/conceitos.pdf" download="Docker_estudo.pdf">Clique aqui</a></p>
+                    </object>
                   </div>
                   <a href="notion.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
@@ -434,7 +442,6 @@
                 <h4>Ceo &amp; Founder</h4>
               </div>
             </div><!-- End testimonial item -->
-
             <div class="swiper-slide">
               <div class="testimonial-item" data-aos="fade-up">
                 <p>                
@@ -442,8 +449,12 @@
                 </p>
                 <div class="portfolio-links">
                   <div style="width: 100%; height: 430px;">
-                    <!-- Usando a tag <embed> -->
-                    <embed src="pdf/github/github_intro.pdf" type="application/pdf" width="100%" height="100%">
+                    <!-- Usando a tag <object> para incorporar o conteúdo -->
+                    <object data="pdf/github/github_intro.pdf" type="application/pdf" width="100%" height="100%">
+                      <!-- Conteúdo alternativo ou mensagem de erro -->
+                      <p>O conteúdo não pôde ser carregado. <a href="pdf/github/github_intro.pdf">Clique aqui</a> para abrir o arquivo em outra aba.</p>
+                      <p>Ou para download do PDF. <a href="pdf/github/github_intro.pdf" download="Github_estudo.pdf">Clique aqui</a></p>
+                    </object>
                   </div>
                   <a href="notion.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
@@ -460,8 +471,12 @@
                 </p>
                 <div class="portfolio-links">
                   <div style="width: 100%; height: 430px;">
-                    <!-- Usando a tag <embed> -->
-                    <embed src="pdf/php/historia_php.pdf" type="application/pdf" width="100%" height="100%">
+                    <!-- Usando a tag <object> para incorporar o conteúdo -->
+                    <object data="pdf/php/historia_php.pdf" type="application/pdf" width="100%" height="100%">
+                      <!-- Conteúdo alternativo ou mensagem de erro -->
+                      <p>O conteúdo não pôde ser carregado. <a href="pdf/php/historia_php.pdf">Clique aqui</a> para abrir o arquivo em outra aba.</p>
+                      <p>Ou para download do PDF. <a href="pdf/php/historia_php.pdf" download="historia_php_estudo.pdf">Clique aqui</a></p>
+                    </object>
                   </div>
                   <a href="notion.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
@@ -583,7 +598,23 @@
       }
     } 
   </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var pdfIframe = document.getElementById("pdf-iframe");
 
+    // Verificar se o iframe foi carregado com sucesso
+    pdfIframe.onload = function () {
+      // O PDF foi carregado com sucesso
+      console.log("PDF loaded successfully!");
+    };
+
+    // Se ocorrer um erro ao carregar o iframe (por exemplo, se o PDF não puder ser exibido)
+    pdfIframe.onerror = function () {
+      // Redirecionar para o link desejado
+      window.location.href = "https://seu-link-de-redirecionamento.com";
+    };
+  });
+</script>
 <script>
   // Função para mudar o idioma
   function changeLanguage(selectedLanguage) {
