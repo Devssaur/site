@@ -163,7 +163,7 @@
         itemSelector: '.portfolio-item'
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let portfolioFilters = select('#portfolio-fltersportfolio-flters li', true);
 
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
