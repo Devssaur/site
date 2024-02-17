@@ -2502,6 +2502,7 @@
   }
   .bx-link-external:before {
     content: "\eb3e";
+    
   }
   .bx-lira:before {
     content: "\eb3f";
